@@ -1,9 +1,10 @@
 var MAX_NUMBERS = 5;
-var TIMER = 30;
+var TIMER = 5;
 var numbers = [];
 var userNumbers = [];
 var validNumbers = [];
 var counter = 0;
+var myTimer = TIMER
 
 for (var i = 0; i < MAX_NUMBERS; i++) {
     numbers.push(Math.ceil(Math.random() * 100));
@@ -25,5 +26,14 @@ setTimeout(function () {
         }
     }
 
-    document.getElementById("myH1").innerHTML = "Hai indovinato " + counter + " numeri!<br>" + validNumbers.join(" ");
+    document.getElementById("myH2").innerHTML = "Hai indovinato " + counter + " numeri!<br>" + validNumbers.join(" ");
 }, (1000 * TIMER));
+
+// timer a video (bonus)
+var visibleTimer = setInterval(function() {
+    if (myTimer == 0) {
+        clearInterval(visibleTimer);
+    } else {
+        document.getElementById("myH1").innerHTML = --myTimer + "s";
+    }
+}, 1000)
