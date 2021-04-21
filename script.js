@@ -1,5 +1,5 @@
 var MAX_NUMBERS = 5;
-var TIMER = 5;
+var TIMER = 30;
 var numbers = [];
 var userNumbers = [];
 var validNumbers = [];
