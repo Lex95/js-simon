@@ -17,6 +17,7 @@ function askNumbers(arrayNumbers) {
     }
 }
 
+// c'è il problema che se inserisci 5 numeri uguali te li segna tutti corretti, ma al tempo stesso nulla vieta al generatore di generare più numeri uguali, quindi bisognerebbe far sì che il generatore genere 5 numeri DIVERSI per poi mettere una condizione aggiuntiva nell'if a riga 24 che eviti di pushare un numero già inserito
 setTimeout(function () {
     askNumbers(userNumbers);
     for (i = 0; i < numbers.length; i++) {
